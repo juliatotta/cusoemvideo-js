@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Valores</title>
+    <style>
+        body {
+            font: normal 13px Verdana;
+            color: dimgrey;
+            text-align: center;
+            margin-top: 60px;
+        }
+        h1 {
+            color: rgb(235, 155, 91);
+        }
+        input {
+            font: normal 13px Verdana;
+            color: dimgrey;
+        }
+        div#res {
+            margin-top: 30px;
+            text-align: start;
+        }
+        div#resSub {
+            margin-top: 30px;
+            text-align: start;
+        }
+        .bt {
+            border-color: #c06e38;
+            border-radius: 3pt;
+            background-color: #fdf3dd00;
+            font: normal 13px Verdana;
+            color: #f8a221;
+        
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input class= "bt" type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado:</div>
+
+    <h1>Subtraindo Valores</h1>
+    <input type="number" name="txtn3" id="txtn3"> -
+    <input type="number" name="txtn4" id="txtn4">
+    <input class= "bt" type="button" value="Subtrair" onclick="subtrair()">
+    <div id="resSub">Resultado:</div>
+    
+</body>
+
+<script>
+    function somar(){
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var resultado = window.document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var soma = n1 + n2
+        resultado.innerHTML = `A soma entre ${n1} e ${n2} = <strong>${soma}</strong>`
+    }
+    function subtrair(){
+        var tn3 = window.document.getElementById('txtn3')
+        var tn4 = window.document.getElementById('txtn4')
+        var resultadorsub = window.document.getElementById('resSub')
+        var n3 = Number(tn3.value)
+        var n4 = Number(tn4.value)
+        var subtrair = n3 - n4
+        resultadorsub.innerHTML = `A subtração entre ${n3} e ${n4} = <strong>${subtrair}</strong>`
+    }
+</script>
+</html>

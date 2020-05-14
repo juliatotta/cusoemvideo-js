@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 15pt Verdana;
+            background: deeppink;
+            color: deepskyblue;
+            width: 400px;
+            height: 400px;
+            line-height: 400px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="area">
+        Uhh gurrl!
+    </div>
+    
+    <script>
+        var tela = window.document.getElementById('area')
+        tela.addEventListener('click', clicar)
+        tela.addEventListener('mousemove', entrar)
+        tela.addEventListener('mouseout', sair)
+
+        function clicar() {
+            tela.innerText = 'She Already Done Had Herses!'
+            tela.style.background = 'orange'
+        }
+        function entrar(){
+            tela.innerText = 'Hello, hello, hello!'
+        }
+        function sair(){
+            tela.innerText = 'Uhh gurrl!'
+            tela.style.background = 'deeppink'
+
+        }
+    </script>
+</body>
+</html>
